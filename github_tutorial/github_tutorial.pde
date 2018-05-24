@@ -1,9 +1,27 @@
+int r;
+int g;
+int b;
+
+int rd;
+int gd;    //up or uoun
+int bd;
+
 void setup()
 {
-  size(100,100);
-  println("Hello World!");}
+  r=0;
+  g=0;
+  b=0;
+  size(100,300);
+  println("hi!");}
 
 void draw()
 {
-  background(196,128,128);
+  r+=1;
+  g+=2;
+  b+=3;
+  if(r>=255) r=0;
+  if(g>=255) g=0;
+  if(b>=255) b=0;
+  println("r="+r+"g="+g+"b="+b);
+  background(r,g,b);
 }
